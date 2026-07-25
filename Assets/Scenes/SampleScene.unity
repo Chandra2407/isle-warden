@@ -1546,12 +1546,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementScript
   cameraTransform: {fileID: 2081088957}
+  outlineSelectorScript: {fileID: 1834854115}
   walkSpeed: 2
   runSpeed: 5
   rotationSpeed: 3
   gravity: -20
+  attackRange: 2
   attackLayerBlendSpeed: 8
-  outlineSelectorScript: {fileID: 1834854115}
 --- !u!4 &855171072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 56b2b25cdd5914547b909663f4864098, type: 3}
@@ -1596,7 +1597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Outline
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
+  outlineWidth: 1
   precomputeOutline: 1
   bakeKeys:
   - {fileID: 4987632398419711469, guid: ff9406346d18989408bfe18b738dfe63, type: 3}
