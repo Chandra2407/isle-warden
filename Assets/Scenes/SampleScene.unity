@@ -1522,6 +1522,8 @@ MonoBehaviour:
   gravity: -20
   attackRange: 1.5
   attackLayerBlendSpeed: 8
+  attackDamage: 10
+  attackMultiplier: 5
 --- !u!4 &855171072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 56b2b25cdd5914547b909663f4864098, type: 3}

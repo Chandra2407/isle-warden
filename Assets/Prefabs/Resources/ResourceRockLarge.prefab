@@ -67,6 +67,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d1cb13d5bc8ad0c44b262a6373176e51, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6934492346045225449}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d1cb13d5bc8ad0c44b262a6373176e51, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1260903836406133750}
   m_SourcePrefab: {fileID: 100100000, guid: d1cb13d5bc8ad0c44b262a6373176e51, type: 3}
 --- !u!1 &1569415798049002320 stripped
 GameObject:
@@ -95,3 +98,17 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6405954778408910464, guid: d1cb13d5bc8ad0c44b262a6373176e51, type: 3}
+--- !u!114 &1260903836406133750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569415798049002320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88071c3fd9d664d4b92e8e47be4c4e82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResourceHealthScript
+  maxHealth: 100
+  currentHealth: 0

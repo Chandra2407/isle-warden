@@ -21,6 +21,8 @@ public class PlayerMovementScript : MonoBehaviour
     [Header("Combat")]
     [SerializeField] private float attackRange = 2f;
     [SerializeField] private float attackLayerBlendSpeed = 8f;
+    [SerializeField] private float attackDamage = 10f;
+    [SerializeField] private float attackMultiplier = 1f;
 
     private Animator animator;
     private CharacterController characterController;
@@ -130,6 +132,11 @@ public class PlayerMovementScript : MonoBehaviour
             StopAttack();
             return;
         }
+        if (gameObject == null || hit.collider == null || hit.collider.gameObject == null)
+        {
+            StopAttack();
+            return;
+        }
 
         float distance = Vector3.Distance(
             transform.position,
@@ -194,8 +201,19 @@ public class PlayerMovementScript : MonoBehaviour
     {
         isAttacking = false;
         StopAttack();
+        OnAttackHit(attackDamage, attackMultiplier);
     }
 
+    private void OnAttackHit(float attackDamage = 10f, float attackMultiplier = 1f)
+    {
+        if (!outlineSelectorScript.TryGetHoveredSelectable(out RaycastHit hit))
+            return;
+
+        if (hit.collider.TryGetComponent<ResourceHealthScript>(out ResourceHealthScript resourceHealth))
+        {
+            resourceHealth.TakeDamage(attackDamage * attackMultiplier);
+        }
+    }
     #endregion
 
     #region Helpers
